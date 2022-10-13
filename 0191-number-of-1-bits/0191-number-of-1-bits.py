@@ -4,4 +4,8 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        return bin(n).count("1")
+        out = 0
+        while n:
+            out += n % 2
+            n = n >> 1
+        return out
